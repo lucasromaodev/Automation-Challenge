@@ -14,12 +14,6 @@ def is_due_date_passed(due_date_str):
         return False
 
 def get_due_invoices(driver):
-    try:
-        iframe = driver.find_element(By.TAG_NAME, "iframe")
-        driver.switch_to.frame(iframe)
-        print("[INFO] Trocou para iframe")
-    except:
-        print("[INFO] Nenhum iframe encontrado, continuando no contexto principal")
 
     wait = WebDriverWait(driver, 10)
     wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table tbody tr")))

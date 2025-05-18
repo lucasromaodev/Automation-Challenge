@@ -28,7 +28,7 @@ def main():
     print("CSV gerado com sucesso!")
 
     upload_csv(driver)
-    print("CSV enviado2 com sucesso!")
+    print("CSV enviado com sucesso!")
 
     driver.quit()
     print("Automação finalizada com sucesso.")

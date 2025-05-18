@@ -16,12 +16,6 @@ def click_pagination_button(driver, page_number):
     print(f"[INFO] Botão da página {page_number} clicado via JS com sucesso.")
 
 def download_invoices_paginated(driver, due_invoices):
-    try:
-        iframe = driver.find_element(By.TAG_NAME, "iframe")
-        driver.switch_to.frame(iframe)
-        print("[INFO] Troca para iframe feita no download")
-    except Exception:
-        print("[INFO] Nenhum iframe encontrado no download, continuando no contexto principal")
 
     invoice_files = []
 
