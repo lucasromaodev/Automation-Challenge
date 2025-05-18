@@ -29,7 +29,7 @@ Este projeto automatiza o processo de extração de dados de faturas disponívei
 ### Instalação das bibliotecas
 
 ```bash
-pip install selenium pillow pytesseract
+pip install selenium pillow pytesseract requests
 ```
 
 ---
