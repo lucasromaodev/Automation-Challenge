@@ -8,6 +8,9 @@ def init_browser():
     options = webdriver.ChromeOptions()
     #options.add_argument('--headless')
     driver = webdriver.Chrome(options=options)
+
+    driver.maximize_window()  # <-- aqui abre o navegador maximizado
+
     driver.get("https://rpachallengeocr.azurewebsites.net/")
 
     # supondo que driver já está aberto e carregou o site
@@ -21,4 +24,3 @@ def init_browser():
 
     print("Botão START clicado com sucesso!")
     return driver
-
