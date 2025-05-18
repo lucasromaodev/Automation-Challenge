@@ -19,7 +19,9 @@ def get_due_invoices(driver):
     wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table tbody tr")))
 
     invoices = []
-    total_pages = 3
+    paginacao = driver.find_elements(By.CLASS_NAME, "paginate_button")
+
+    total_pages = len(paginacao) - 2  # -2 para tirar previous e next
 
     for page_num in range(1, total_pages + 1):
         print(f"[INFO] Processando página {page_num}...")
