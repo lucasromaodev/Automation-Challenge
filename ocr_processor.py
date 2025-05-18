@@ -67,7 +67,10 @@ def extract_invoice_data(invoice_files):
         if not total_due:
             print(f"[ERRO] Não encontrou Total Due em {file_path}")
 
+        # Inclui ID e Due Date que já vêm do site, junto com os dados extraídos do OCR
         extracted_data.append({
+            'ID': invoice.get('ID', ''),
+            'Due Date': invoice.get('Due Date', ''),
             'Invoice Number': invoice_number,
             'Invoice Date': invoice_date,
             'Company Name': company_name,
