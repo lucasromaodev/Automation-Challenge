@@ -56,7 +56,13 @@ pip install selenium pillow pytesseract
 1. **Configure o caminho do Tesseract** (em `ocr_processor.py`):
 
 ```python
+# Caminho para a instalação do Tesseract (ajuste se necessário)
 tesseract_path = r"C:\Program Files\Tesseract-OCR"
+pytesseract.pytesseract.tesseract_cmd = os.path.join(tesseract_path, "tesseract.exe")
+
+# Caminho para a pasta tessdata
+os.environ["TESSDATA_PREFIX"] = os.path.join(tesseract_path, "tessdata")
+
 ```
 
 2. **Execute o script principal:**
