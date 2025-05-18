@@ -85,7 +85,7 @@ ID,DueDate,InvoiceNo,InvoiceDate,CompanyName,TotalDue
 ## 📌 Observações
 
 - O código considera que as faturas estejam em até **3 páginas**.
-- Os arquivos `.jpg` são apagados ao final da execução.
+- Os arquivos `.jpg` são apagados ao inicio da execução.
 - A função `get_due_invoices(driver)` está em `utils.py`, necessário para funcionamento completo.
 
 ---
